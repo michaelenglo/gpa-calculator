@@ -33,6 +33,7 @@ $(document).ready( function() {
 	});
 
 	$("#btn-calculate").on("click", function() {
-		alert("Number of semester is = " + getTotalSemester() + "and number of course is " + getTotalCourse());
+		$(".number-of-semester-text").text(getTotalSemester());
+		$(".number-of-course-text").text(getTotalCourse());
 	});
 });

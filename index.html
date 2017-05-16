@@ -25,11 +25,13 @@
       </div>
 
       <div class="jumbotron drop-shadow">
-        <h3>Your GPA from the last <strong>30</strong> credits:</h3>
+        <h3>Your GPA from the last <strong>30</strong> credits is:</h3>
         <h1 class="text-center">
           <strong>{{3.00}}</strong>
         </h1>
         <h4 class="text-muted text-center">/4.33</h4>
+        <h8> Total Number of Semesters: <strong class="number-of-semester-text">0</strong> </h8><br>
+        <h8> Total Number of Courses: <strong class="number-of-course-text">0</strong> </h8>
       </div>
       <h2 class="text-white">Course List:</h2>
       <div class="panel panel-default panel-semester drop-shadow">
@@ -38,35 +40,35 @@
             <div class="panel panel-default panel-course">
               <div class="panel-heading panel-heading-course"> Class 1 </div>
               <div class="panel-body panel-body-course">
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-lg-4">
-                        <label for="course-name">Name: </label>
-                        <input type="text" class="form-control" id="course-name">
-                      </div>
-                      <div class="col-lg-4">
-                        <label for="credit">Credit:* </label>
-                        <input type="text" class="form-control" id="credit">
-                      </div>
-                      <div class="col-lg-4">
-                        <label for="grade">Grade:* </label>
-                        <select class="form-control" id="grade">
-                          <option> --Select Grade-- </option>
-                          <option> A+ </option>
-                          <option> A </option>
-                          <option> A- </option>
-                          <option> B+ </option>
-                          <option> B </option>
-                          <option> B- </option>
-                          <option> C+ </option>
-                          <option> C </option>
-                          <option> C- </option>
-                          <option> D </option>
-                          <option> F </option>
-                        </select>
-                      </div>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="col-lg-4">
+                      <label for="course-name">Name: </label>
+                      <input type="text" class="form-control" id="course-name">
+                    </div>
+                    <div class="col-lg-4">
+                      <label for="credit">Credit:* </label>
+                      <input type="text" class="form-control" id="credit">
+                    </div>
+                    <div class="col-lg-4">
+                      <label for="grade">Grade:* </label>
+                      <select class="form-control" id="grade">
+                        <option> --Select Grade-- </option>
+                        <option> A+ </option>
+                        <option> A </option>
+                        <option> A- </option>
+                        <option> B+ </option>
+                        <option> B </option>
+                        <option> B- </option>
+                        <option> C+ </option>
+                        <option> C </option>
+                        <option> C- </option>
+                        <option> D </option>
+                        <option> F </option>
+                      </select>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
             <button type="button" class="btn btn-add-course btn-success btn-sm btn-block">ADD COURSE</button>
