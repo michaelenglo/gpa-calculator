@@ -1,0 +1,54 @@
+body {
+  margin-top: 1px;
+  background-image: url(bg-image.jpg);
+  background-size: 20%;
+}
+
+.bg-blue {
+  background-color: #337ab7;
+}
+
+.nav-pills {
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.text-white {
+  color: white;
+}
+
+.jumbotron {
+  margin-top: 20px;
+  padding-top:20px;
+}
+
+.drop-shadow {
+  -webkit-box-shadow: 10px 10px 6px -6px black;
+}
+
+.panel-body .panel-course{
+  padding-left: 2px;
+  padding-right:2px;
+  padding-top: 2px;
+  padding-bottom: 7px;
+}
+
+.panel-course {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+#btn-add-course {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#btn-add-semester {
+  margin-bottom: 20px;
+}
+
+#btn-calculate {
+  margin-bottom: 20px;
+}
