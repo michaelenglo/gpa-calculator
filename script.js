@@ -1,29 +1,38 @@
 $(document).ready( function() {
 
 	var maximumCredits = 30;
-	var semester = new Array(1);
-	semester[0] = [];
 
 	var panelCourse = $(".panel-course").clone();
 	var panelSemester = $(".panel-semester").clone();
 
+	var getTotalSemester = function() {
+		return $(".panel-semester").length;
+	};
+
+	var getTotalCourse = function() {
+		var totalCourse = 0;
+		for(var i = 0; i < getTotalSemester(); i++){
+			totalCourse += ($(".panel-semester").eq(i).find(".panel-course").length);
+		}
+		return totalCourse;
+	};
 
 
 	//to add course field panel onto the semester panel body
 	$(".btn-add-course").on("click", function() {
 		$(this).before(panelCourse.clone());
-		//add one more course to the course array
-		alert("adding new course in semester" + $(".btn-add-course").index(this));
 	});
 
 	// to add another semester.
 	$("#btn-add-semester").on("click", function() {
 		$(this).before(panelSemester.clone());
-		//add a semester to the semester array
-		semester.push([]);
+
+		$(".btn-add-course").last().on("click", function() {
+			$(this).before(panelCourse.clone());
+		});
 	});
 
 	$("#btn-calculate").on("click", function() {
-		console.log("Number of Semester is " + semester.length);
+		alert("Number of semester is = " + getTotalSemester() + "and number of course is " + getTotalCourse());
 	});
 });
