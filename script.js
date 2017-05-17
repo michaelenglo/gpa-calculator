@@ -32,7 +32,15 @@ $(document).ready( function() {
 		});
 	});
 
+	$(".form-group-course-name").on("focusout", function() {
+		if($(this).val() === ''){
+			alert("wrong");
+			$(this).addClass("form-group-danger");
+		}
+	});
+
 	$("#btn-calculate").on("click", function() {
+
 		$(".number-of-semester-text").text(getTotalSemester());
 		$(".number-of-course-text").text(getTotalCourse());
 	});
