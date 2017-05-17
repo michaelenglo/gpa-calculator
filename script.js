@@ -32,11 +32,18 @@ $(document).ready( function() {
 		});
 	});
 
-	$(".form-group-course-name").on("focusout", function() {
-		if($(this).val() === ''){
-			alert("wrong");
-			$(this).addClass("form-group-danger");
-		}
+	$(".credit").on("focusout", function() {
+		if($(this).val().match(/^[1-9]+$/) != null)
+			$(this).parent().removeClass("has-error");
+		else
+			$(this).parent().addClass("has-error");
+	});
+
+	$(".grade").on("focusout", function() {
+		if($(this).val() !== "--Select Grade--")
+			$(this).parent().removeClass("has-error");
+		else
+			$(this).parent().addClass("has-error");
 	});
 
 	$("#btn-calculate").on("click", function() {
