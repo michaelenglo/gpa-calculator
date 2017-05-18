@@ -47,6 +47,7 @@ $(document).ready( function() {
 	});
 
 	$("#btn-calculate").on("click", function() {
+		let remainingCredits = maximumCredits;
 
 		$(".number-of-semester-text").text(getTotalSemester());
 		$(".number-of-course-text").text(getTotalCourse());
